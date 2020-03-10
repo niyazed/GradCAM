@@ -1,7 +1,7 @@
 # GradCAM
 Tensorflow 2.0 implementation of GradCAM
 
-> This is a GradCAM implementation of pretrained models and also your own trained custom model
+> This is a GradCAM implementation of pretrained models and also custom trained model
 
 ![output.jpg](output.jpg)
 
