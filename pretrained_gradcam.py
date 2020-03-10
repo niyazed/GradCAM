@@ -18,12 +18,15 @@ ap.add_argument("-m", "--model", type=str, default="VGG16",
 	choices=('VGG16', 'VGG19', 'ResNet50', 'InceptionV3', 'InceptionResNetV2', 'Xception', 'MobileNet', 'MobileNetV2',
           'DenseNet', 'NASNet', 'EfficientNet'),
 	help="model to be used")
+ap.add_argument("-l", "--layer", type=str, default="None",
+	help="gradcam of specific layer")
 args = vars(ap.parse_args())
 
 
-# load the pre-trained model
+# load the pre-trained model nad print summary
 print("[INFO] loading model...")
 model,_ ,_ = get_model(args["model"])
+model.summary()
 
 # load the original image from disk (in OpenCV format) and then
 # resize the image to its target dimensions
@@ -49,7 +52,11 @@ label = "{}: {:.2f}%".format(label, prob * 100)
 print("[INFO] {}".format(label))
 
 # initialize our gradient class activation map and build the heatmap
-cam = GradCAM(model, i)
+if args['layer'] == 'None':
+	cam = GradCAM(model, i)
+else:
+    cam = GradCAM(model, i, args['layer'])
+    
 heatmap = cam.compute_heatmap(image)
 
 # resize the resulting heatmap to the original input image dimensions
