@@ -12,10 +12,25 @@ Select any image and run:
     $ python pretrained_gradcam.py --image images/rugby.jpeg
 ```
 ## Pretrained Models
-You can choose any specific model, default `VGG16`:
+#### All pretrained models listed below -
+```
+ - VGG16 
+ - VGG19
+ - ResNet50
+ - InceptionV3 
+ - InceptionResNetV2
+ - Xception
+ - MobileNet
+ - MobileNetV2
+ - DenseNet
+ - NASNet
+ - EfficientNet | Link - https://github.com/qubvel/efficientnet
+ ```
+You can choose any of the above models, default `VGG16`:
 ```python
     $ python pretrained_gradcam.py --image images/rugby.jpeg --model VGG16
 ```
+
 For specific layer GradCAM run below command:
 ```sh
 > model.summary()
@@ -43,20 +58,7 @@ block2_pool (MaxPooling2D)   (None, 56, 56, 128)       0
 ```python
     $ python pretrained_gradcam.py --image images/rugby.jpeg --model VGG16 --layer block1_conv1
 ```
-#### All pretrained models listed below -
-```
- - VGG16 
- - VGG19
- - ResNet50
- - InceptionV3 
- - InceptionResNetV2
- - Xception
- - MobileNet
- - MobileNetV2
- - DenseNet
- - NASNet
- - EfficientNet | Link - https://github.com/qubvel/efficientnet
- ```
+
  
 ## Custom Model
 Run this command to work with your own trained model:
