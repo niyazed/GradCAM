@@ -69,6 +69,10 @@ Run this command to work with your own trained model:
 ```python
     $ python custom_gradcam.py --image [image] --model [model] --width [w] --height [h] --layer [layer]
 ```
+### Reference
+Grad-CAM: Visualize class activation maps with Keras, TensorFlow, and Deep Learning <a href="https://www.pyimagesearch.com/2020/03/09/grad-cam-visualize-class-activation-maps-with-keras-tensorflow-and-deep-learning/">@pyimagesearch</a>
+
+Thanks ❤️ @jrosebr1 
 
 ---------------------
 <a href="https://github.com/niyazed/GradCAM/blob/master/LICENSE"><img src="https://camo.githubusercontent.com/cce12751caa9db9689a3110caf2147c4e047ceb4/687474703a2f2f6f72696731352e64657669616e746172742e6e65742f356239352f662f323031362f3037302f332f622f6d69745f6c6963656e73655f6c6f676f5f62795f657863616c696275727a65726f2d64397572326c672e706e67" width="8%"></a>
