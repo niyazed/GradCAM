@@ -25,6 +25,9 @@ Select any image and run:
  - DenseNet
  - NASNet
  - EfficientNet | Link - https://github.com/qubvel/efficientnet
+ 
+ > NOTE - You need to install `EfficientNet` seperately from the given link because 
+   it's not included in keras application.
  ```
 You can choose any of the above models, default `VGG16`:
 ```python
